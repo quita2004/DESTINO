@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<title>Destino - Advanced & High Customizable eCommerce HTML5/CSS3 Theme</title>
+	<link rel="shortcut icon" type="image/png" href="favicon.ico"/>
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Josefin+Sans:400,600,600italic,700' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Shadows+Into+Light' rel='stylesheet' type='text/css'>
+	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700i" rel="stylesheet">
+	<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
+	<link rel="stylesheet" href="css/slick.css" type="text/css" />
+	<link rel="stylesheet" href="css/styles.css" type="text/css" />
+	
+	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+
+	<script src="js/jquery-2.1.4.min.js"></script>
+	
+	<script src="js/slick.min.js"></script>
+	
+	<script>
+		$(document).ready(function(){ 
+			$window = $(window);
+			
+			menu_offset_top = 65;
+			function processScroll() {
+				var scrollTop = $window.scrollTop();
+				if ( scrollTop >= menu_offset_top) {
+					$('.header').addClass('header-on-top');
+					$('body').addClass('body-on-top');
+				} else if (scrollTop <= menu_offset_top) {
+					$('.header').removeClass('header-on-top');
+					$('body').removeClass('body-on-top');
+				}
+			}
+			processScroll();
+			$window.scroll(function(){
+				processScroll();
+			});
+			
+			
+			// Scroll
+			
+			function goToByScroll(id){
+				id = id.replace("link", "");
+				$('html,body').animate({ scrollTop: $("#"+id).offset().top - 65}, 'slow');           
+			}
+
+			$(".navigation > li > a").click(function(e) { 
+				e.preventDefault(); 
+				goToByScroll($(this).attr("id"));           
+			});
+			
+			$(".demos-web > a").click(function(e) { 
+				e.preventDefault(); 
+				var id = $(this).attr('href');
+				id = id.replace("#", "");
+				$('html,body').animate({ scrollTop: $("#"+id).offset().top - 65}, 'slow');           
+			});
+			
+			
+			$( ".navigation > li:last-child > a").unbind( "click" );
+			
+			$(".discover-more > a").click(function(e) { 
+				e.preventDefault(); 
+				$('html,body').animate({ scrollTop: $("#slider-mobile").offset().top - 100}, 'slow');  
+			});
+			// Slick slider
+			$('.slider-mobile').slick({
+				centerMode: true,
+				centerPadding: '0',
+				slidesToShow: 5,
+				autoplaySpeed: 1500,
+				slidesToScroll: 1,
+				speed: 400,
+				dots: false,
+				infinite: true,
+				autoplay: true,
+				responsive: [
+				{
+					breakpoint: 1024,
+					settings: {
+						slidesToShow: 3,
+						slidesToScroll: 3,
+						infinite: true,
+					}
+				},
+				{
+					breakpoint: 767,
+					settings: {
+						slidesToShow: 2,
+						slidesToScroll: 2
+					}
+				},
+				{
+					breakpoint: 480,
+					settings: {
+						slidesToShow: 1,
+						slidesToScroll: 1
+					}
+				}
+				]
+			});
+		});
+	</script>
+</head>
+
+<body >
+	<div class="body-wrapper">
+		<div class="header">
+			<div class="navigation-logo">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-3 col-md-3 logo-wrapper">
+							<h1>
+								<strong>Destino - Premium Responsive Opencart Theme</strong>
+								<a title="Destino - Best Multipurpose eCommerce HTML Template" href="#">
+									<img alt="Destino - Best Multipurpose eCommerce HTML Template" src="images/logo.png" />
+								</a>
+							</h1>
+						</div>
+						
+						<div class="col-lg-9 col-md-9 nav-wrapper">
+							<div class="nav-container">
+								<ul class="navigation">
+									<li><a id="demo1link" href="#" title="Demo">Demo</a></li>
+									
+									<li><a id="allfieaturelink" href="#" title="All features">All features</a></li>
+									<li><a href="https://themeforest.net/item/destino-responsive-multipurpose-html5-template/20462322" title="Purchase">Purchase</a></li>
+								</ul>
+								<div class="clearfix"> </div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div id="hightlight-content" class="hightlight-content">
+			<canvas id="demo-canvas"></canvas>
+			<div class="container">
+				<div class="demos-web">
+					<div class="title-header">
+						<h2>Destino is More Than a Theme.<br/>
+							It's <span>Powerful Tool</span> for online Shopping Site!
+						</h2>
+						<h4>Destino - Best Multipurpose eCommerce HTML Template</h4>
+					</div>
+					<a href="#demo1" title="try our demos">Try All Demos</a>
+				</div>
+			</div>
+		</div>
+		<div class="device-info">
+			<img src="images/device.png" alt="SW Zenwares - Premium Responsive Opencart Theme"/>
+		</div>
+		<div id="demo1" class="theme-demo">
+			
+			<div class="container">
+				<div class="content-demo">
+					<div class="title-page">
+						<h2>All Demos Available For Destino</h2>
+						<h3>Meets & fits any kind of your business. More Themes are coming soon!</h3>
+					</div>
+					
+					<div class="grid-demo">
+						<ul class="row">
+							<li class="col-lg-4 col-md-4 col-sm-6 demo-item">
+								<div class="demo-image">
+									<a href="http://demo.smartaddons.com/templates/html/destino/index.html" target="_blank" title="Destino Demo">
+										<img src="images/demo/img-1.jpg" alt="Destino"/>
+									</a>
+								</div>
+								
+								<div class="demo-info">
+									<h3 class="title-demo">Home Page #1</h3>
+								</div>
+							</li>
+							
+							<li class="col-lg-4 col-md-4 col-sm-6 demo-item">
+								<div class="demo-image">
+									<a href="http://demo.smartaddons.com/templates/html/destino/home2.html" target="_blank" title="Destino Demo">
+										<img src="images/demo/img-2.jpg" alt="Destino"/>
+									</a>
+								</div>
+								
+								<div class="demo-info">
+									<h3 class="title-demo">Home Page #2</h3>
+								</div>
+							</li>
+							
+							<li class="col-lg-4 col-md-4 col-sm-6 demo-item">
+								<div class="demo-image">
+									<a href="http://demo.smartaddons.com/templates/html/destino/home3.html" target="_blank" title="So-Destino Demo">
+										<img src="images/demo/img-3.jpg" alt="Destino"/>
+									</a>
+								</div>
+								
+								<div class="demo-info">
+									<h3 class="title-demo">Home Page #3</h3>
+								</div>
+							</li>
+							
+							<li class="col-lg-4 col-md-4 col-sm-6 demo-item">
+								<div class="demo-image">
+									<a href="http://demo.smartaddons.com/templates/html/destino/home4.html" target="_blank" title="So-Destino Demo">
+										<img src="images/demo/img-4.jpg" alt=" Destino"/>
+									</a>
+								</div>
+								
+								<div class="demo-info">
+									<h3 class="title-demo">Home Page #4</h3>
+								</div>
+							</li>
+							
+							
+
+							
+							
+							<li class="col-lg-4 col-md-4 col-sm-6 demo-item new-item">
+								<div class="demo-image">
+									<a href="http://demo.smartaddons.com/templates/html/destino/html_width_RTL/index.html" target="_blank" title="so-Destino Demo">
+										<img src="images/demo/img-rtl.jpg" alt="SO Destino"/>
+									</a>
+								</div>
+								
+								<div class="demo-info">
+									<h3 class="title-demo">Home Page RTL</h3>															
+								</div>
+							</li>
+							
+							
+						</ul>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		
+		
+		
+		<div id="allfieature" class="all-features">
+			<div class="container">
+				<div class="all-features-content">
+					<div class="title-page">
+						<h2>All Features</h2>
+						<h3>There are so many reasons to choose Destino, here are a few items</h3>
+					</div>
+					
+					
+					<div class="list-feature text-center">
+						<div class="row">
+							<div class="col-lg-4 col-md-4 col-sm-12 demo-item">
+								<div class="demo-layout">
+									<img src="images/features/feature1.png" alt="Destino">
+								</div>
+							</div>
+							<div class="col-lg-4 col-md-4 col-sm-12 demo-item">
+								<div class="demo-layout">
+									<img src="images/features/feature5.png" alt="Destino">
+								</div>
+							</div>
+							
+
+							
+							<div class="col-lg-4 col-md-4 col-sm-12 demo-item">
+								<div class="demo-layout">
+									<img src="images/features/megamenu.png" alt="Destino">
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-lg-4 col-md-4 col-sm-12 demo-item">
+								<div class="demo-layout">
+									<img src="images/features/sass.png" alt="Destino">
+								</div>
+							</div>
+							
+							<div class="col-lg-4 col-md-4 col-sm-12 demo-item">
+								<div class="demo-layout">
+									<img src="images/features/feature2.png" alt="Destino">
+								</div>
+							</div>
+							
+							<div class="col-lg-4 col-md-4 col-sm-12 demo-item">
+								<div class="demo-layout">
+									<img src="images/features/feature3.png" alt="Destino">
+								</div>
+							</div>
+						</div>
+						
+						<div class="row">
+							<div class="col-lg-4 col-md-4 col-sm-12 demo-item">
+								<div class="demo-layout">
+									<img src="images/features/quickview.png" alt="Destino">
+								</div>
+							</div>
+							
+							<div class="col-lg-4 col-md-4 col-sm-12 demo-item">
+								<div class="demo-layout">
+									<img src="images/features/feature4.png" alt="Destino">
+								</div>
+							</div>
+							
+							
+						</div>
+						
+						
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+		<div class="buytheme-bottom">
+			<div class="container">
+				<div class="buy-bottom-content">
+					<h4>Like us? Rate for us now!</h4>
+					<div>
+						Start Creating Your Website Today<br>
+						With Destino Theme Now
+					</div>
+					<a class="buy-bottom" href="https://themeforest.net/item/destino-responsive-multipurpose-html5-template/20462322" title="BUY THIS THEME" target="_blank">BUY THIS THEME</a>
+				</div>
+			</div>
+		</div>
+		
+		<div class="copyright">
+			<address>
+				&copy; 2017 Destino. All Rights Reserved.Powered by Smartaddons. <br />
+			</address>
+		</div>
+	</div>
+	<script type="text/javascript" src="js/TweenLite.min.js"></script>
+	<script type="text/javascript" src="js/EasePack.min.js"></script>
+	<script type="text/javascript" src="js/rAF.js"></script>
+	<script type="text/javascript" src="js/canvas.js"></script>
+	<script type="text/javascript" src="js/so.custom.js"></script>	
+</body>
+</html>

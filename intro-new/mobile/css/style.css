@@ -1,0 +1,259 @@
+/* RESET */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
+html{
+height: 100%;
+overflow-x: hidden;
+}
+body{
+font-family: 'Raleway', sans-serif;
+line-height:22px;
+padding:0px;
+margin:0px;
+font-size:14px;
+color:white;
+background: url(../images/bg.png) no-repeat #333 center center;background-attachment:fixed; -webkit-background-size: 100%; -moz-background-size: 100%;-o-background-size: 100%;background-size: 100%;-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover; background-size: cover;
+}
+
+.main_content{margin:auto;padding:50px 20em;overflow:hidden;}
+.main_content:before{content:'';width:41.5%; height:100%; position:absolute;z-index:2; left:0; top:0;background:rgba(0,0,0,0.3);}
+
+@media  screen and (max-width: 1600px) {
+	.main_content{padding:50px 7em;}
+	.main_content:before{width:37%;}
+}
+@media  screen and (max-width: 1366px) {
+	.main_content{padding:50px 1em;}
+	.main_content:before{width:37%;}
+
+}
+
+.iphone_bg{
+width:420px;
+height:816px;
+float:left;
+background:url(../images/iphone.png) no-repeat center;
+}
+.mobile_wrap{
+width:320px;
+height:568px;
+padding:120px 0 0 50px;
+}
+.left_content {
+width:550px;
+float:left;
+position:relative;z-index:10;
+}
+.left_content h1{
+font-size:40px;
+font-weight:700;
+letter-spacing:-1px;
+margin:100px 0 5px 0;
+padding:0px;
+line-height:1em;
+text-transform:uppercase;
+}
+.left_content h2{
+font-size:30px;
+font-weight:700;
+letter-spacing:-1px;
+line-height:30px;
+margin:30px 0 0 5px;
+padding:0px;
+color:#1f4548;
+clear:both;
+float:left;
+}
+.description{
+font-size:32px;
+display:block;
+padding:0 0 0 5px;
+color:#fff;
+}
+.left_content p{
+padding:50px 50px 50px 5px;
+
+}
+.preview_list{
+list-style:none;
+padding:0px;
+margin:0px;
+}
+.preview_list li{
+background:url(../images/checked.png) no-repeat left;
+padding:10px 0 10px 40px;
+color:#fff;
+}
+.right_content {
+width:300px;
+float:left;
+padding:0 0 0 50px;
+box-sizing:border-box;
+}
+.right_content h3{
+font-size:22px;
+font-weight:700;
+letter-spacing:-1px;
+line-height:30px;
+margin:25px 0 25px 0px;
+padding:0px;
+
+}
+.right_content small{
+display:inline-block;
+margin:50px 0 30px 0;
+padding:5px;
+font-size:13px;
+color:#333;
+background-color:#FFFFFF;
+}
+.swipe_to_navigate{
+font-size:14px;
+margin:100px 0 50px 0; 
+}
+.designs_list{
+list-style:none;
+padding:0px;
+margin:20px 0 0 0;
+display:inline-block;
+}
+.designs_list li{
+width:150px;
+padding:0px;
+margin:10px 0 0 0;
+display:inline-block;
+text-align:center;
+}
+.designs_list li span{
+display:block;
+padding:0 0 5px 0;
+font-size:14px;
+}
+.designs_list li a{
+text-decoration:none;
+color:#000;
+}
+a.video_button{
+	background:url(../images/video.png) no-repeat left #fb6738;
+	background-position:20px 13px;
+	display:block;
+	border-bottom:4px #cd3809 solid;
+	float:left;
+	margin:0 0 50px 0;
+	padding:16px 40px 16px 80px;
+	color:#fff;
+	text-transform:uppercase;
+	font-weight:500;
+	text-decoration:none;
+	border-radius:5px;
+	font-size:16px;
+	transition: all 0.2s ease-in-out;
+}
+a.video_button:hover{
+	margin-top:2px;
+	border-bottom:2px #481707  solid;
+	
+}
+
+
+		iframe {
+            width: 100%;
+            height: 100%;
+            display: block;
+			box-sizing:border-box;
+            border: 1px solid #eee;
+        }
+        .devices {
+            position:relative;z-index:10;
+            float:left;
+            
+        }
+        .device-ios, .device-android {
+            float: left;
+        }
+		.device-ios .statusbar {
+			position: absolute;
+			width: 375px;
+			height: 20px;
+			background: url(../images/status-bar.png);
+			
+			top: 85px;
+			-webkit-background-size: 100% auto;
+			background-size: 100% auto;
+		}
+        .device-ios {
+            width: 375px;
+            height: 667px;
+            background: #fff;
+            border-radius: 55px;
+            box-shadow: 0px 0px 0px 2px #aaa;
+            padding: 105px 20px;
+            position: relative;
+           
+        }
+        .device-ios:before {
+                content: '';
+				width: 60px;
+				height: 10px;
+				border-radius: 10px;
+				position: absolute;
+				left: 50%;
+				margin-left: -30px;
+				background: #777;
+				top: 50px;
+        }
+        .device-ios:after {
+               content: '';
+			position: absolute;
+			width: 60px;
+			height: 60px;
+			left: 50%;
+			margin-left: -30px;
+			bottom: 20px;
+			border-radius: 100%;
+			box-sizing: border-box;
+			border: 5px solid #777;
+        }
+       
+        .button {
+            position: absolute;
+            width: 200px;
+            margin-left: -100px;
+            left: 50%;
+            top: -44px;
+            margin-top: -30px;
+            box-sizing: border-box;
+            text-align: center;
+            line-height: 44px;
+            border-radius: 3px;
+            text-decoration: none;
+            color: blue;
+            font-size: 14px;
+        }
+        .device-ios .button {
+            border: 1px solid #007aff;
+            color: #007aff;
+        }
+        .device-ios .button:active {
+            background: rgba(0, 122, 255, 0.15);
+        }
+        .device-android .button {
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+            color: #2196f3;
+            text-transform: uppercase;
+        }
+        .device-android .button:active {
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+            background: rgba(0, 0, 0, 0.1);
+        }
+		::-webkit-scrollbar {
+      width:  $size;
+      height: $size;
+		}
+
+  ::-webkit-scrollbar-thumb {
+      background: $foreground-color;
+  }
+
+  ::-webkit-scrollbar-track {
+      background: $background-color;
+  }

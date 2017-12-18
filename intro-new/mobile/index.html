@@ -1,0 +1,84 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Best Market - Multipurpose eCommerce HTML Template</title>
+<meta name="author" content="sindevo.com">
+<meta name="description" content="web app mobile template">
+<link rel="stylesheet" href="css/style.css">
+<link href="https://fonts.googleapis.com/css?family=Raleway:400,500,700" rel="stylesheet">
+
+</head>
+<body>
+<div class="main_content">
+
+
+        <div class="left_content">
+            <h1>Welcome to Market</h1>
+            <span class="description">Mobile Layout Demo!</span>
+            <p>Market helps you to create a mobile website, a mobile web app, and integrated with solutions like phonegap, a real native app.</p>
+            <a href="https://www.youtube.com/watch?v=dVshBjFd2rk&feature=youtu.be" target="_blank" class="video_button">see how it works on iPhone</a>
+           
+            <ul class="designs_list">
+              <li><a href="#" id="main"><img src="images/layout0.png" alt="" title="" /></a></li>
+              <li><a href="#" id="circles"><img src="images/layout1.png" alt="" title="" /></a></li>
+              <li><a href="#" id="minimal"> <img src="images/layout2.png" alt="" title="" /></a></li>
+            </ul>
+        </div>
+        
+        <div class="devices">
+        	<div class="device device-ios">
+				<div class="statusbar"></div>
+				<iframe id="frame" frameborder="no" border="0" scrolling="no" width="320px" height="568px;"></iframe> 
+            </div>
+        </div>
+        
+        
+        <div class="right_content">
+            <div class="swipe_to_navigate">Scan the QR Code below  to view a live demo on your mobile device.</div>
+            
+            <img src="images/qrcode.png" width="130px" alt="qrcode" title="" />
+            <small>http://demo.smartaddons.com/templates/html/market/mobile/index.html</small>
+            <h3>Main features:</h3>
+            <ul class="preview_list">
+              <li>Responsive layout</li>
+			  <li>Multiple designs</li>
+              <li>Ajax pages navigation</li>
+              <li>Photos and videos sections</li>
+			  <li>Login and social sharing panels</li>
+              <li>Forms, tabs, toogles and many more page elements</li>
+              
+            </ul>
+        </div> 
+        
+        
+</div>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript" charset="utf-8">
+var $ = jQuery.noConflict(); 
+$(document).ready(function () {
+$("#frame").attr("src", "http://demo.smartaddons.com/templates/html/market/mobile/index.html");
+
+$("#main").click(function () { 
+	  $("#frame").attr("src", "http://demo.smartaddons.com/templates/html/market/mobile/index.html");
+	  $(".right_content small").html("http://demo.smartaddons.com/templates/html/market/mobile/index.html");
+	$(".right_content img").attr("src", "images/qrcode.png");
+}); 
+$("#circles").click(function () { 
+	  $("#frame").attr("src", "http://demo.smartaddons.com/templates/html/market/mobile/home2.html");
+	  $(".right_content small").html("http://demo.smartaddons.com/templates/html/market/mobile/home2.html");
+	  $(".right_content img").attr("src", "images/qrcode-2.png");
+});
+$("#minimal").click(function () { 
+	  $("#frame").attr("src", "http://demo.smartaddons.com/templates/html/market/mobile/home3.html");
+	  $(".right_content small").html("http://demo.smartaddons.com/templates/html/market/mobile/home3.html");
+	  $(".right_content img").attr("src", "images/qrcode-3.png");
+});
+
+});
+</script>  
+</body>
+</html>
